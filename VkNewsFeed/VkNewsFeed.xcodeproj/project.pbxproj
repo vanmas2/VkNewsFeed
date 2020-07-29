@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C828A0124D201AE00E5C5FF /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0024D201AE00E5C5FF /* VKSdkFramework.framework */; };
+		2C828A0224D201AE00E5C5FF /* VKSdkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0024D201AE00E5C5FF /* VKSdkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C828A0824D201C900E5C5FF /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0724D201C900E5C5FF /* Kingfisher.framework */; };
+		2C828A0924D201C900E5C5FF /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0724D201C900E5C5FF /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C828A0B24D201D800E5C5FF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0A24D201D700E5C5FF /* Alamofire.framework */; };
+		2C828A0C24D201D800E5C5FF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0A24D201D700E5C5FF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C9AD28024D1EC0A009D8474 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9AD27F24D1EC0A009D8474 /* AppDelegate.swift */; };
 		2C9AD28424D1EC0A009D8474 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9AD28324D1EC0A009D8474 /* ViewController.swift */; };
 		2C9AD28724D1EC0A009D8474 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9AD28524D1EC0A009D8474 /* Main.storyboard */; };
@@ -14,7 +20,27 @@
 		2C9AD28C24D1EC0B009D8474 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9AD28A24D1EC0B009D8474 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		2C828A0324D201AE00E5C5FF /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				2C828A0924D201C900E5C5FF /* Kingfisher.framework in Embed Frameworks */,
+				2C828A0C24D201D800E5C5FF /* Alamofire.framework in Embed Frameworks */,
+				2C828A0224D201AE00E5C5FF /* VKSdkFramework.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		2C828A0024D201AE00E5C5FF /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
+		2C828A0424D201B800E5C5FF /* VkNewsFeed.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = VkNewsFeed.xcodeproj; sourceTree = "<group>"; };
+		2C828A0724D201C900E5C5FF /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
+		2C828A0A24D201D700E5C5FF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
 		2C9AD27C24D1EC0A009D8474 /* VkNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VkNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9AD27F24D1EC0A009D8474 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9AD28324D1EC0A009D8474 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +55,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C828A0824D201C900E5C5FF /* Kingfisher.framework in Frameworks */,
+				2C828A0B24D201D800E5C5FF /* Alamofire.framework in Frameworks */,
+				2C828A0124D201AE00E5C5FF /* VKSdkFramework.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C8289FF24D201AE00E5C5FF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2C828A0A24D201D700E5C5FF /* Alamofire.framework */,
+				2C828A0724D201C900E5C5FF /* Kingfisher.framework */,
+				2C828A0424D201B800E5C5FF /* VkNewsFeed.xcodeproj */,
+				2C828A0024D201AE00E5C5FF /* VKSdkFramework.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		2C828A0524D201B800E5C5FF /* Products */ = {
+			isa = PBXGroup;
+			name = Products;
+			sourceTree = "<group>";
+		};
 		2C9AD27324D1EC0A009D8474 = {
 			isa = PBXGroup;
 			children = (
 				2C9AD27E24D1EC0A009D8474 /* VkNewsFeed */,
 				2C9AD27D24D1EC0A009D8474 /* Products */,
+				2C8289FF24D201AE00E5C5FF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +100,54 @@
 		2C9AD27E24D1EC0A009D8474 /* VkNewsFeed */ = {
 			isa = PBXGroup;
 			children = (
-				2C9AD27F24D1EC0A009D8474 /* AppDelegate.swift */,
-				2C9AD28324D1EC0A009D8474 /* ViewController.swift */,
-				2C9AD28524D1EC0A009D8474 /* Main.storyboard */,
-				2C9AD28824D1EC0B009D8474 /* Assets.xcassets */,
-				2C9AD28A24D1EC0B009D8474 /* LaunchScreen.storyboard */,
-				2C9AD28D24D1EC0B009D8474 /* Info.plist */,
+				2C9AD29624D1F604009D8474 /* Classes */,
+				2C9AD29524D1F5F6009D8474 /* Resources */,
+				2C9AD29724D1F616009D8474 /* SupportFiles */,
 			);
 			path = VkNewsFeed;
+			sourceTree = "<group>";
+		};
+		2C9AD29524D1F5F6009D8474 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				2C9AD28824D1EC0B009D8474 /* Assets.xcassets */,
+				2C9AD28A24D1EC0B009D8474 /* LaunchScreen.storyboard */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		2C9AD29624D1F604009D8474 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				2C9AD29824D1F66E009D8474 /* Application */,
+				2C9AD28324D1EC0A009D8474 /* ViewController.swift */,
+				2C9AD28524D1EC0A009D8474 /* Main.storyboard */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		2C9AD29724D1F616009D8474 /* SupportFiles */ = {
+			isa = PBXGroup;
+			children = (
+				2C9AD28D24D1EC0B009D8474 /* Info.plist */,
+			);
+			path = SupportFiles;
+			sourceTree = "<group>";
+		};
+		2C9AD29824D1F66E009D8474 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				2C9AD27F24D1EC0A009D8474 /* AppDelegate.swift */,
+				2C9AD29924D1F67C009D8474 /* DI */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		2C9AD29924D1F67C009D8474 /* DI */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = DI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -74,6 +160,8 @@
 				2C9AD27824D1EC0A009D8474 /* Sources */,
 				2C9AD27924D1EC0A009D8474 /* Frameworks */,
 				2C9AD27A24D1EC0A009D8474 /* Resources */,
+				2C9AD29A24D1F9BC009D8474 /* Cartfile */,
+				2C828A0324D201AE00E5C5FF /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -109,6 +197,12 @@
 			mainGroup = 2C9AD27324D1EC0A009D8474;
 			productRefGroup = 2C9AD27D24D1EC0A009D8474 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 2C828A0524D201B800E5C5FF /* Products */;
+					ProjectRef = 2C828A0424D201B800E5C5FF /* VkNewsFeed.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				2C9AD27B24D1EC0A009D8474 /* VkNewsFeed */,
@@ -128,6 +222,33 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2C9AD29A24D1F9BC009D8474 /* Cartfile */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 8;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"$(SRCROOT)/Carthage/Build/iOS/BraintreeCore.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Alamofire.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/BraintreeCore.framework",
+			);
+			name = Cartfile;
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeCore.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Alamofire.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/BraintreeCore.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+			shellPath = /bin/sh;
+			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2C9AD27824D1EC0A009D8474 /* Sources */ = {
@@ -281,7 +402,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FJAQ3Z7K75;
-				INFOPLIST_FILE = VkNewsFeed/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = VkNewsFeed/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -299,7 +424,11 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = FJAQ3Z7K75;
-				INFOPLIST_FILE = VkNewsFeed/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Carthage/Build/iOS",
+				);
+				INFOPLIST_FILE = VkNewsFeed/SupportFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
