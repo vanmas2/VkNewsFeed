@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		2C9AD28024D1EC0A009D8474 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9AD27F24D1EC0A009D8474 /* AppDelegate.swift */; };
-		2C9AD28224D1EC0A009D8474 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9AD28124D1EC0A009D8474 /* SceneDelegate.swift */; };
 		2C9AD28424D1EC0A009D8474 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9AD28324D1EC0A009D8474 /* ViewController.swift */; };
 		2C9AD28724D1EC0A009D8474 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9AD28524D1EC0A009D8474 /* Main.storyboard */; };
 		2C9AD28924D1EC0B009D8474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9AD28824D1EC0B009D8474 /* Assets.xcassets */; };
@@ -18,7 +17,6 @@
 /* Begin PBXFileReference section */
 		2C9AD27C24D1EC0A009D8474 /* VkNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VkNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9AD27F24D1EC0A009D8474 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2C9AD28124D1EC0A009D8474 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		2C9AD28324D1EC0A009D8474 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C9AD28824D1EC0B009D8474 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C9AD28D24D1EC0B009D8474 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -57,7 +55,6 @@
 			isa = PBXGroup;
 			children = (
 				2C9AD27F24D1EC0A009D8474 /* AppDelegate.swift */,
-				2C9AD28124D1EC0A009D8474 /* SceneDelegate.swift */,
 				2C9AD28324D1EC0A009D8474 /* ViewController.swift */,
 				2C9AD28524D1EC0A009D8474 /* Main.storyboard */,
 				2C9AD28824D1EC0B009D8474 /* Assets.xcassets */,
@@ -139,7 +136,6 @@
 			files = (
 				2C9AD28424D1EC0A009D8474 /* ViewController.swift in Sources */,
 				2C9AD28024D1EC0A009D8474 /* AppDelegate.swift in Sources */,
-				2C9AD28224D1EC0A009D8474 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
