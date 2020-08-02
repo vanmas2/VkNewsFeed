@@ -7,12 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C0BA88F24D6C685006759FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BA88E24D6C685006759FE /* ViewController.swift */; };
+		2C0BA89424D6C997006759FE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BA89324D6C997006759FE /* View.swift */; };
+		2C0C9DDF24D6D4F900CB4817 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C9DDE24D6D4F900CB4817 /* UIView+Extensions.swift */; };
 		2C828A0124D201AE00E5C5FF /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0024D201AE00E5C5FF /* VKSdkFramework.framework */; };
 		2C828A0224D201AE00E5C5FF /* VKSdkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0024D201AE00E5C5FF /* VKSdkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C828A0824D201C900E5C5FF /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0724D201C900E5C5FF /* Kingfisher.framework */; };
 		2C828A0924D201C900E5C5FF /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0724D201C900E5C5FF /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C828A0B24D201D800E5C5FF /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0A24D201D700E5C5FF /* Alamofire.framework */; };
 		2C828A0C24D201D800E5C5FF /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0A24D201D700E5C5FF /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		2C828A1224D20CBA00E5C5FF /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C828A1124D20CBA00E5C5FF /* SignInViewController.swift */; };
+		2C828A1424D20CD100E5C5FF /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C828A1324D20CD100E5C5FF /* SignInView.swift */; };
+		2C828A1624D2121200E5C5FF /* SignInViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C828A1524D2121200E5C5FF /* SignInViewProtocol.swift */; };
 		2C9AD28024D1EC0A009D8474 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9AD27F24D1EC0A009D8474 /* AppDelegate.swift */; };
 		2C9AD28924D1EC0B009D8474 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C9AD28824D1EC0B009D8474 /* Assets.xcassets */; };
 		2C9AD28C24D1EC0B009D8474 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2C9AD28A24D1EC0B009D8474 /* LaunchScreen.storyboard */; };
@@ -35,10 +41,16 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		2C0BA88E24D6C685006759FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2C0BA89324D6C997006759FE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		2C0C9DDE24D6D4F900CB4817 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
 		2C828A0024D201AE00E5C5FF /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
 		2C828A0424D201B800E5C5FF /* VkNewsFeed.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = VkNewsFeed.xcodeproj; sourceTree = "<group>"; };
 		2C828A0724D201C900E5C5FF /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
 		2C828A0A24D201D700E5C5FF /* Alamofire.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Alamofire.framework; path = Carthage/Build/iOS/Alamofire.framework; sourceTree = "<group>"; };
+		2C828A1124D20CBA00E5C5FF /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		2C828A1324D20CD100E5C5FF /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		2C828A1524D2121200E5C5FF /* SignInViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewProtocol.swift; sourceTree = "<group>"; };
 		2C9AD27C24D1EC0A009D8474 /* VkNewsFeed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VkNewsFeed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C9AD27F24D1EC0A009D8474 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2C9AD28824D1EC0B009D8474 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -60,6 +72,65 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C0BA88B24D6C668006759FE /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				2C0C9DDD24D6D4E100CB4817 /* Extensions */,
+				2C0BA88C24D6C672006759FE /* UI */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		2C0BA88C24D6C672006759FE /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				2C0BA89224D6C98A006759FE /* View */,
+				2C0BA88D24D6C677006759FE /* ViewController */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		2C0BA88D24D6C677006759FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C0BA88E24D6C685006759FE /* ViewController.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2C0BA89024D6C7ED006759FE /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				2C828A1124D20CBA00E5C5FF /* SignInViewController.swift */,
+				2C828A1524D2121200E5C5FF /* SignInViewProtocol.swift */,
+			);
+			path = ViewController;
+			sourceTree = "<group>";
+		};
+		2C0BA89124D6C7F4006759FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C828A1324D20CD100E5C5FF /* SignInView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C0BA89224D6C98A006759FE /* View */ = {
+			isa = PBXGroup;
+			children = (
+				2C0BA89324D6C997006759FE /* View.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		2C0C9DDD24D6D4E100CB4817 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2C0C9DDE24D6D4F900CB4817 /* UIView+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		2C8289FF24D201AE00E5C5FF /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -74,6 +145,30 @@
 		2C828A0524D201B800E5C5FF /* Products */ = {
 			isa = PBXGroup;
 			name = Products;
+			sourceTree = "<group>";
+		};
+		2C828A0D24D20A0500E5C5FF /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		2C828A0E24D20A2D00E5C5FF /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2C828A1024D20A5300E5C5FF /* SignIn */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		2C828A1024D20A5300E5C5FF /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				2C0BA89124D6C7F4006759FE /* View */,
+				2C0BA89024D6C7ED006759FE /* ViewController */,
+			);
+			path = SignIn;
 			sourceTree = "<group>";
 		};
 		2C9AD27324D1EC0A009D8474 = {
@@ -115,7 +210,10 @@
 		2C9AD29624D1F604009D8474 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				2C0BA88B24D6C668006759FE /* Core */,
 				2C9AD29824D1F66E009D8474 /* Application */,
+				2C828A0D24D20A0500E5C5FF /* Domain */,
+				2C828A0E24D20A2D00E5C5FF /* Presentation */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -248,6 +346,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C0C9DDF24D6D4F900CB4817 /* UIView+Extensions.swift in Sources */,
+				2C0BA88F24D6C685006759FE /* ViewController.swift in Sources */,
+				2C828A1624D2121200E5C5FF /* SignInViewProtocol.swift in Sources */,
+				2C0BA89424D6C997006759FE /* View.swift in Sources */,
+				2C828A1424D20CD100E5C5FF /* SignInView.swift in Sources */,
+				2C828A1224D20CBA00E5C5FF /* SignInViewController.swift in Sources */,
 				2C9AD28024D1EC0A009D8474 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
