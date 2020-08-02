@@ -7,10 +7,28 @@
 //
 
 import UIKit
+import VKSdkFramework
 
 
 final class SignInViewController<View: SignInViewProtocol>: ViewController<View> {
 
+    // MARK: Properties
+    
+    lazy var vkSdkUIDelegate = SignInViewControllerVKSdkUIDelegate(viewController: self)
+    
+    private let signInInteractor: VkSignInIteractorProtocol
+    
+    // MARK: Constructors
+    
+    init(signInInteractor: VkSignInIteractorProtocol) {
+        self.signInInteractor = signInInteractor
+        super.init()
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
     // MARK: Override functions
     
     override func viewDidLoad() {
@@ -23,7 +41,27 @@ private extension SignInViewController {
     
     func configureViewEvents() {
         view().signInButtonDidTap = { [weak self] in
-            
+            self?.signInInteractor.execute { (result) in
+                
+            }
         }
+    }
+}
+
+
+final class SignInViewControllerVKSdkUIDelegate: NSObject, VKSdkUIDelegate {
+    
+    unowned var viewController: UIViewController
+    
+    init(viewController: UIViewController) {
+        self.viewController = viewController
+    }
+    
+    func vkSdkShouldPresent(_ controller: UIViewController!) {
+        viewController.present(controller, animated: true, completion: nil)
+    }
+    
+    func vkSdkNeedCaptchaEnter(_ captchaError: VKError!) {
+        
     }
 }

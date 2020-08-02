@@ -10,6 +10,12 @@
 		2C0BA88F24D6C685006759FE /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BA88E24D6C685006759FE /* ViewController.swift */; };
 		2C0BA89424D6C997006759FE /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0BA89324D6C997006759FE /* View.swift */; };
 		2C0C9DDF24D6D4F900CB4817 /* UIView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C0C9DDE24D6D4F900CB4817 /* UIView+Extensions.swift */; };
+		2C6EA6E424D6DCAD00EE9D96 /* VkSignInIteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EA6E324D6DCAD00EE9D96 /* VkSignInIteractor.swift */; };
+		2C6EA6E924D6DFD700EE9D96 /* VkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EA6E824D6DFD700EE9D96 /* VkService.swift */; };
+		2C6EA6EB24D6F7F100EE9D96 /* VkSignInIteractorProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EA6EA24D6F7F100EE9D96 /* VkSignInIteractorProtocol.swift */; };
+		2C6EA6ED24D6F80900EE9D96 /* VkSignInGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EA6EC24D6F80900EE9D96 /* VkSignInGateway.swift */; };
+		2C6EA6F024D6F87000EE9D96 /* VoidClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EA6EF24D6F87000EE9D96 /* VoidClosure.swift */; };
+		2C6EA6F224D6F88100EE9D96 /* ResultClosure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6EA6F124D6F88100EE9D96 /* ResultClosure.swift */; };
 		2C828A0124D201AE00E5C5FF /* VKSdkFramework.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0024D201AE00E5C5FF /* VKSdkFramework.framework */; };
 		2C828A0224D201AE00E5C5FF /* VKSdkFramework.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0024D201AE00E5C5FF /* VKSdkFramework.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		2C828A0824D201C900E5C5FF /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C828A0724D201C900E5C5FF /* Kingfisher.framework */; };
@@ -44,6 +50,12 @@
 		2C0BA88E24D6C685006759FE /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2C0BA89324D6C997006759FE /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		2C0C9DDE24D6D4F900CB4817 /* UIView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extensions.swift"; sourceTree = "<group>"; };
+		2C6EA6E324D6DCAD00EE9D96 /* VkSignInIteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkSignInIteractor.swift; sourceTree = "<group>"; };
+		2C6EA6E824D6DFD700EE9D96 /* VkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkService.swift; sourceTree = "<group>"; };
+		2C6EA6EA24D6F7F100EE9D96 /* VkSignInIteractorProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkSignInIteractorProtocol.swift; sourceTree = "<group>"; };
+		2C6EA6EC24D6F80900EE9D96 /* VkSignInGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VkSignInGateway.swift; sourceTree = "<group>"; };
+		2C6EA6EF24D6F87000EE9D96 /* VoidClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VoidClosure.swift; sourceTree = "<group>"; };
+		2C6EA6F124D6F88100EE9D96 /* ResultClosure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultClosure.swift; sourceTree = "<group>"; };
 		2C828A0024D201AE00E5C5FF /* VKSdkFramework.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = VKSdkFramework.framework; path = Carthage/Build/iOS/VKSdkFramework.framework; sourceTree = "<group>"; };
 		2C828A0424D201B800E5C5FF /* VkNewsFeed.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = VkNewsFeed.xcodeproj; sourceTree = "<group>"; };
 		2C828A0724D201C900E5C5FF /* Kingfisher.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Kingfisher.framework; path = Carthage/Build/iOS/Kingfisher.framework; sourceTree = "<group>"; };
@@ -75,6 +87,7 @@
 		2C0BA88B24D6C668006759FE /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				2C6EA6EE24D6F86300EE9D96 /* Common */,
 				2C0C9DDD24D6D4E100CB4817 /* Extensions */,
 				2C0BA88C24D6C672006759FE /* UI */,
 			);
@@ -129,6 +142,57 @@
 				2C0C9DDE24D6D4F900CB4817 /* UIView+Extensions.swift */,
 			);
 			path = Extensions;
+			sourceTree = "<group>";
+		};
+		2C6EA6E124D6DC6300EE9D96 /* UseCases */ = {
+			isa = PBXGroup;
+			children = (
+				2C6EA6E224D6DC7000EE9D96 /* VkSignInIteractor */,
+			);
+			path = UseCases;
+			sourceTree = "<group>";
+		};
+		2C6EA6E224D6DC7000EE9D96 /* VkSignInIteractor */ = {
+			isa = PBXGroup;
+			children = (
+				2C6EA6EC24D6F80900EE9D96 /* VkSignInGateway.swift */,
+				2C6EA6E324D6DCAD00EE9D96 /* VkSignInIteractor.swift */,
+				2C6EA6EA24D6F7F100EE9D96 /* VkSignInIteractorProtocol.swift */,
+			);
+			path = VkSignInIteractor;
+			sourceTree = "<group>";
+		};
+		2C6EA6E524D6DFB800EE9D96 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				2C6EA6E624D6DFBF00EE9D96 /* Services */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		2C6EA6E624D6DFBF00EE9D96 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				2C6EA6E724D6DFC400EE9D96 /* Vk */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		2C6EA6E724D6DFC400EE9D96 /* Vk */ = {
+			isa = PBXGroup;
+			children = (
+				2C6EA6E824D6DFD700EE9D96 /* VkService.swift */,
+			);
+			path = Vk;
+			sourceTree = "<group>";
+		};
+		2C6EA6EE24D6F86300EE9D96 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2C6EA6EF24D6F87000EE9D96 /* VoidClosure.swift */,
+				2C6EA6F124D6F88100EE9D96 /* ResultClosure.swift */,
+			);
+			path = Common;
 			sourceTree = "<group>";
 		};
 		2C8289FF24D201AE00E5C5FF /* Frameworks */ = {
@@ -210,10 +274,12 @@
 		2C9AD29624D1F604009D8474 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				2C0BA88B24D6C668006759FE /* Core */,
 				2C9AD29824D1F66E009D8474 /* Application */,
+				2C0BA88B24D6C668006759FE /* Core */,
+				2C6EA6E524D6DFB800EE9D96 /* Data */,
 				2C828A0D24D20A0500E5C5FF /* Domain */,
 				2C828A0E24D20A2D00E5C5FF /* Presentation */,
+				2C6EA6E124D6DC6300EE9D96 /* UseCases */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -346,13 +412,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C6EA6E424D6DCAD00EE9D96 /* VkSignInIteractor.swift in Sources */,
+				2C6EA6ED24D6F80900EE9D96 /* VkSignInGateway.swift in Sources */,
 				2C0C9DDF24D6D4F900CB4817 /* UIView+Extensions.swift in Sources */,
 				2C0BA88F24D6C685006759FE /* ViewController.swift in Sources */,
 				2C828A1624D2121200E5C5FF /* SignInViewProtocol.swift in Sources */,
+				2C6EA6EB24D6F7F100EE9D96 /* VkSignInIteractorProtocol.swift in Sources */,
 				2C0BA89424D6C997006759FE /* View.swift in Sources */,
+				2C6EA6F024D6F87000EE9D96 /* VoidClosure.swift in Sources */,
 				2C828A1424D20CD100E5C5FF /* SignInView.swift in Sources */,
 				2C828A1224D20CBA00E5C5FF /* SignInViewController.swift in Sources */,
+				2C6EA6E924D6DFD700EE9D96 /* VkService.swift in Sources */,
 				2C9AD28024D1EC0A009D8474 /* AppDelegate.swift in Sources */,
+				2C6EA6F224D6F88100EE9D96 /* ResultClosure.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
