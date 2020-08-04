@@ -1,5 +1,5 @@
 //
-//  VkService.swift
+//  VkAuthorizationService.swift
 //  VkNewsFeed
 //
 //  Created by Иван Масальских on 02.08.2020.
@@ -10,7 +10,7 @@ import Foundation
 import VKSdkFramework
 
 
-final class VkService: NSObject {
+final class VkAuthorizationService: NSObject {
     
     // MARK: Properties
     
@@ -22,22 +22,23 @@ final class VkService: NSObject {
     
     // MARK: Private properties
     
+    private let tokenStorage: VkTokenStorageProtocol
+    
     private var sdkInstance: VKSdk
-    
-    private var credentials: Credentials?
-    
+        
     private var signInCompletion: VkSignInCompletion?
     
     // MARK: Constructors
     
-    override init() {
+    init(tokenStorage: VkTokenStorageProtocol) {
+        self.tokenStorage = tokenStorage
         sdkInstance = VKSdk.initialize(withAppId: Defaults.appID)
         super.init()
         sdkInstance.register(self)
     }
 }
 
-extension VkService: VkSignInGateway {
+extension VkAuthorizationService: VkSignInGateway {
     
     func sighIn(completion: @escaping VkSignInCompletion) {
         signInCompletion = completion
@@ -51,32 +52,31 @@ extension VkService: VkSignInGateway {
     }
 }
 
-extension VkService: VKSdkDelegate {
+extension VkAuthorizationService: VKSdkDelegate {
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         guard
             result.state == .authorized,
-            let userId = result.token.userId,
             let token = result.token.accessToken
             else { return }
-        credentials = Credentials(userId: userId, token: token)
+        tokenStorage.setToken(token)
         signInCompletion?(.success(()))
     }
     
     func vkSdkUserAuthorizationFailed() {
-        credentials = nil
+        tokenStorage.removeToken()
         signInCompletion?(.failure(.unknown))
     }
     
     func vkSdkTokenHasExpired(_ expiredToken: VKAccessToken!) {
-        credentials = nil
+        tokenStorage.removeToken()
     }
     
     func vkSdkAuthorizationStateUpdated(with result: VKAuthorizationResult!) {
         if result.state == .authorized {
             signInCompletion?(.success(()))
         } else {
-            credentials = nil
+            tokenStorage.removeToken()
             signInCompletion?(.failure(.unknown))
         }
     }
@@ -84,25 +84,16 @@ extension VkService: VKSdkDelegate {
     func vkSdkAccessTokenUpdated(_ newToken: VKAccessToken!, oldToken: VKAccessToken!) {
         guard
             newToken != nil,
-            let userId = newToken.userId,
             let token = newToken.accessToken
             else { return }
-        credentials = Credentials(userId: userId, token: token)
+        tokenStorage.setToken(token)
     }
 }
 
-private extension VkService {
-        
-    struct Credentials {
-        let userId: String
-        let token: String
-    }
-}
-
-private extension VkService {
+private extension VkAuthorizationService {
     
     enum Defaults {
         static let appID = "7556421"
-        static let scope = ["wall"]
+        static let scope = ["wall", "friends"]
     }
 }
