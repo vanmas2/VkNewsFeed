@@ -1,5 +1,5 @@
 //
-//  VkNewsfeedAPIModel.swift
+//  NewsfeedsResponse.swift
 //  VkNewsFeed
 //
 //  Created by Иван Масальских on 04.08.2020.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-struct VkNewsfeedAPIModel: Decodable {
+struct NewsfeedsResponse: Decodable {
     let response: Response
     
     struct Response: Decodable {

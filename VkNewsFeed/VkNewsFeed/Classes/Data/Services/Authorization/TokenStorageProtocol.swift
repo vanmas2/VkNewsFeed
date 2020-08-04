@@ -1,5 +1,5 @@
 //
-//  VkTokenStorageProtocol.swift
+//  TokenStorageProtocol.swift
 //  VkNewsFeed
 //
 //  Created by Иван Масальских on 03.08.2020.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-protocol VkTokenStorageProtocol {
+protocol TokenStorageProtocol {
     func getToken() -> String?
     func setToken(_ token: String)
     func removeToken()

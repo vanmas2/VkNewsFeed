@@ -1,5 +1,5 @@
 //
-//  VkTokenStorage.swift
+//  TokenStorage.swift
 //  VkNewsFeed
 //
 //  Created by Иван Масальских on 03.08.2020.
@@ -9,7 +9,7 @@
 import Foundation
 
 
-final class VkTokenStorage: ValueStorage {
+final class TokenStorage: ValueStorage {
     
     private var store: String?
     
@@ -28,7 +28,7 @@ final class VkTokenStorage: ValueStorage {
     }
 }
 
-extension VkTokenStorage: VkTokenStorageProtocol {
+extension TokenStorage: TokenStorageProtocol {
     
     func getToken() -> String? {
         return get()

@@ -1,5 +1,5 @@
 //
-//  VkSignInGateway.swift
+//  SignInGateway.swift
 //  VkNewsFeed
 //
 //  Created by Иван Масальских on 02.08.2020.
@@ -9,6 +9,6 @@
 import Foundation
 
 
-protocol VkSignInGateway {
+protocol SignInGateway {
     func sighIn(completion: @escaping VkSignInCompletion)
 }

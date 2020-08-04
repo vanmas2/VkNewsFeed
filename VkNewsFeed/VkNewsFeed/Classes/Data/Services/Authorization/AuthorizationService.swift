@@ -1,5 +1,5 @@
 //
-//  VkAuthorizationService.swift
+//  AuthorizationService.swift
 //  VkNewsFeed
 //
 //  Created by Иван Масальских on 02.08.2020.
@@ -10,7 +10,7 @@ import Foundation
 import VKSdkFramework
 
 
-final class VkAuthorizationService: NSObject {
+final class AuthorizationService: NSObject {
     
     // MARK: Properties
     
@@ -22,15 +22,15 @@ final class VkAuthorizationService: NSObject {
     
     // MARK: Private properties
     
-    private let tokenStorage: VkTokenStorageProtocol
+    private let tokenStorage: TokenStorageProtocol
     
     private var sdkInstance: VKSdk
         
-    private var signInCompletion: VkSignInCompletion?
+    private var signInCompletion: SignInCompletion?
     
     // MARK: Constructors
     
-    init(tokenStorage: VkTokenStorageProtocol) {
+    init(tokenStorage: TokenStorageProtocol) {
         self.tokenStorage = tokenStorage
         sdkInstance = VKSdk.initialize(withAppId: Defaults.appID)
         super.init()
@@ -38,9 +38,9 @@ final class VkAuthorizationService: NSObject {
     }
 }
 
-extension VkAuthorizationService: VkSignInGateway {
+extension AuthorizationService: SignInGateway {
     
-    func sighIn(completion: @escaping VkSignInCompletion) {
+    func sighIn(completion: @escaping SignInCompletion) {
         signInCompletion = completion
         VKSdk.wakeUpSession(Defaults.scope) { (state, error) in
             if state == .authorized {
@@ -52,7 +52,7 @@ extension VkAuthorizationService: VkSignInGateway {
     }
 }
 
-extension VkAuthorizationService: VKSdkDelegate {
+extension AuthorizationService: VKSdkDelegate {
     
     func vkSdkAccessAuthorizationFinished(with result: VKAuthorizationResult!) {
         guard
@@ -90,7 +90,7 @@ extension VkAuthorizationService: VKSdkDelegate {
     }
 }
 
-private extension VkAuthorizationService {
+private extension AuthorizationService {
     
     enum Defaults {
         static let appID = "7556421"

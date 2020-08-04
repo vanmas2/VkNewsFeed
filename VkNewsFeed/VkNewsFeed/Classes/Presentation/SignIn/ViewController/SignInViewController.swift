@@ -16,11 +16,11 @@ final class SignInViewController<View: SignInViewProtocol>: ViewController<View>
     
     lazy var vkSdkUIDelegate = SignInViewControllerVKSdkUIDelegate(viewController: self)
     
-    private let signInInteractor: VkSignInIteractorProtocol
+    private let signInInteractor: SignInIteractorProtocol
     
     // MARK: Constructors
     
-    init(signInInteractor: VkSignInIteractorProtocol) {
+    init(signInInteractor: SignInIteractorProtocol) {
         self.signInInteractor = signInInteractor
         super.init()
     }
